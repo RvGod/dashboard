@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2025 at 07:25 PM
+-- Generation Time: Dec 09, 2025 at 12:07 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -37,7 +37,7 @@ CREATE TABLE `budget` (
 --
 
 INSERT INTO `budget` (`id`, `value`) VALUES
-(1, 1500);
+(1, 5000);
 
 -- --------------------------------------------------------
 
@@ -55,11 +55,13 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`) VALUES
-(1, 'Food'),
-(2, 'Bills'),
-(3, 'Salary'),
-(4, 'Transport'),
-(5, 'gfh');
+(19, '123'),
+(20, '123'),
+(23, 'Food'),
+(24, 'Food'),
+(25, '%@$#@'),
+(26, 'Food'),
+(27, 'Food');
 
 -- --------------------------------------------------------
 
@@ -81,8 +83,7 @@ CREATE TABLE `transactions` (
 --
 
 INSERT INTO `transactions` (`id`, `amount`, `type`, `category`, `date`, `description`) VALUES
-(1, 123, 'expense', 'Food', '1111-11-11', '123'),
-(2, 123, 'expense', 'Salary', '1112-11-11', 'tr');
+(36, 100, 'expense', 'Food', '0000-00-00', 'Lunch');
 
 -- --------------------------------------------------------
 
@@ -92,7 +93,7 @@ INSERT INTO `transactions` (`id`, `amount`, `type`, `category`, `date`, `descrip
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `username` varchar(100) NOT NULL,
+  `fullname` varchar(255) DEFAULT NULL,
   `email` varchar(150) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -101,10 +102,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(1, 'rvg123', 'rvg@gmail.com', '$2y$10$hldkvFbOti3dzeEZ8HPwQus5mQnAEjnZRm9x9txaI/1rGbnFhUbVC'),
-(2, 'rvg123123', 'rvg123@gmail.com', '$2y$10$zkX7B0K4QtVf2wKq4EunpOtvr.Ebt20bibHXz0gc51oC.jWdpp9Ce'),
-(3, 'rvgrvg', 'rvgrvg@gmail.com', '$2y$10$/R8ukc3hSSn2lMsB9ickve5/1cvl1.5rDw2B058hg2o0Vlm4Wk.FO');
+INSERT INTO `users` (`id`, `fullname`, `email`, `password`) VALUES
+(6, 'ROy', 'roy@gmail.com', '$2y$10$.0Y7xQZd7JMVlfZ5x7Lc6O1o4zWvaxIxckAw7.9UNB9mXalK3AeQ.'),
+(8, 'rvg', 'rvg@gmail.com', '$2y$10$eSL4gscOlF6YZz6Xojdm4OCVZdXOB8rUVWUaRs8I3nWOAb3Bki9zG'),
+(9, 'Test User', 'sample@gmail.com', '$2y$10$o8rzOYjYYyQxd7WE9xnCJupW4TjW8EagaN4wGVsD88ofqdt36R6n2');
 
 --
 -- Indexes for dumped tables
@@ -143,19 +144,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
